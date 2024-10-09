@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const rand = (min, max) => {
+            return Math.round(Math.random() * (max - min)) + min
+        }
+
+        // A 區 1~38 取 6 個數字
+        // 宣告 空的陣列
+        const groupA = []
+
+        while (groupA.length < 6) {
+            // 1~38取一個
+            const number = rand(1, 38)
+            if (!groupA.includes(number)) {
+                groupA.push(number)
+            }
+        }
+        console.log(groupA)
+
+    </script>
+</body>
+
+</html>
